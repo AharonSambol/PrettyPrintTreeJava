@@ -12,7 +12,7 @@ And even supports multi lined nodes (as in strings with \n).
 
 I tried to make this as flexible as possible, so in order to support multiple types of trees
 you need to explain to the program how to print your tree. The way to accomplish this is by passing 2 lambdas:
-1) getChildren: Given a node of your tree type returns an iterable of all its children (from left to right).
+1) getChildren: Given a node of your tree type returns a List of all its children (from left to right).
     For example if this is your tree implementation:
     ```java
     class Tree<T>{
