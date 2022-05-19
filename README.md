@@ -126,7 +126,7 @@ public class Example{
     }
 }
 ```
-![plot](Imagesxample.JPG)
+![plot](Images/example.JPG)
 
 
 # Other Settings
@@ -139,7 +139,7 @@ then you can set trim to a specific amount of characters.
 ```java
 pt.setTrim(3);
 ```
-![plot](Imagesrim.JPG)
+![plot](Images/trim.JPG)
 
 
 ## Return Instead of Print
@@ -161,11 +161,11 @@ You can change the bg color of each node, or even just not use color.
 ```java
 pt.setColor(Color.BLUE);
 ```
-![plot](Imageslue.JPG)
+![plot](Images/blue.JPG)
 ```java
 pt.setColor(Color.NONE);
 ```
-![plot](Imageso_color.JPG)
+![plot](Images/no_color.JPG)
 
 
 ## Border
@@ -173,7 +173,7 @@ You can also surround each node with a little border:
 ```java
 pt.setBorder(true);
 ```
-![plot](Imagesorder.JPG)
+![plot](Images/border.JPG)
 
 
 ## Escape NewLines
@@ -183,7 +183,7 @@ Note: \\n will be escaped into \\\\n so that you can tell the difference
 ```java
 pt.setEscapeNewline(true);
 ```
-![plot](Imagesew_line.JPG)
+![plot](Images/new_line.JPG)
 
 
 ## Max Depth
