@@ -58,7 +58,7 @@ you need to explain to the program how to print your tree. The way to accomplish
         public Tree<T> getLChild() {    return this.lChild; }
     }
     ```
-    Then get_children would be:
+    Then getChildren would be:
     ```java
     (x) -> List.of(x.getLChild(), x.getRChild()),
     ```
@@ -208,6 +208,11 @@ Coming soon
 ## Labels
 
 Coming soon
+
+
+## Horizontal
+
+Coming soon 
 
 
 ## Python
