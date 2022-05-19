@@ -85,6 +85,7 @@ public class PrettyPrintTree<Node> {
     private String[][] treeToStr(Node node, int depth) {
         var val = getVal(node);
         var children = this.getChildren.apply(node);
+        children.removeAll(Collections.singleton(null));
         if (children.size() == 0) {
             String[][] res;
             if (val.length == 1) {
