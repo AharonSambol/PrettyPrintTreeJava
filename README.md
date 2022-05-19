@@ -60,7 +60,10 @@ you need to explain to the program how to print your tree. The way to accomplish
     ```
     Then getChildren would be:
     ```java
-    (x) -> List.of(x.getLChild(), x.getRChild()),
+    (x) -> new ArrayList<>(){{
+            add(x.getLChild());
+            add(x.getRChild());
+        }}
     ```
 
 2) getValue: Given a node of your tree type returns that node's value
