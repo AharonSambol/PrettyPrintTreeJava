@@ -131,6 +131,16 @@ public class Example{
 
 # Other Settings
 
+In order to change the way the tree prints, you can change the settings. 
+This is done after making the PrettyPrintTree object and before calling the display function.
+eg:
+```java
+var pt = new PrettyPrintTree<Tree<String>>(...);
+// settings:
+pt.setTrim(3);
+// print:
+pt.display(tree);
+```
 
 ## Trim
 Say you only want to print the first few characters of each node (in order to keep the tree small for readability),
