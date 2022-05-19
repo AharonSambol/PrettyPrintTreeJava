@@ -232,3 +232,8 @@ Coming soon
 
 I made a Python version too:
 https://github.com/AharonSambol/PrettyPrintTree
+
+## C#
+
+I made a C# version too:
+[https://github.com/AharonSambol/PrettyPrintTree](https://github.com/AharonSambol/PrettyPrintTreeCSharp)
