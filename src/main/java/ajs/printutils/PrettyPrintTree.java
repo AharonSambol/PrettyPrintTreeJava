@@ -4,24 +4,25 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.regex.*;
 
-public class PrettyPrintTree<Node> {
+public final class PrettyPrintTree<Node> {
     private static final Pattern slashNRegex = Pattern.compile("(\\\\n|\n)");
-    private static final HashMap<Color, String> colorToNum = new HashMap<Color, String>() {{
-        put(Color.RED, "41");
-        put(Color.GREEN, "42");
-        put(Color.YELLOW, "43");
-        put(Color.BLUE, "44");
-        put(Color.PINK, "45");
-        put(Color.LIGHT_BLUE, "46");
-        put(Color.GRAY, "47");
-        put(Color.GREY, "47");
-    }};
-    private static final HashMap<Character, Character> addBranch = new HashMap<>() {{
-        put('─', '┴');
-        put('┬', '┼');
-        put('┌', '├');
-        put('┐', '┤');
-    }};
+    private static final Map<Color, String> colorToNum = Map.of(
+            Color.RED, "41",
+            Color.GREEN, "42",
+            Color.YELLOW, "43",
+            Color.BLUE, "44",
+            Color.PINK, "45",
+            Color.LIGHT_BLUE, "46",
+            Color.GRAY, "47",
+            Color.GREY, "47"
+    );
+
+    private static final Map<Character, Character> addBranch = Map.of(
+            '─', '┴',
+            '┬', '┼',
+            '┌', '├',
+            '┐', '┤'
+    );
     private final Function<Node, List<Node>> getChildren;
     private final Function<Node, String> getNodeVal;
     private int maxDepth = -1, trim = -1;
