@@ -7,6 +7,9 @@ It supports trees with any kind of data (as long it can be turned into a string)
 And even supports multi lined nodes (as in strings with \n).
 
 
+# Install
+
+You can install the .jar directly or use jitpack: https://jitpack.io/#AharonSambol/PrettyPrintTreeJava
 
 # Documentation
 
