@@ -93,7 +93,10 @@ then you can call it whenever you want without needing to pass the lambdas each 
 
 ## Examples
 
+### Custom Tree Class
+
 ```java
+import java.util.*;
 class Tree<T>{
     private final T val;
     private final ArrayList<Tree<T>> children;
@@ -134,6 +137,41 @@ public class Example{
 ```
 ![plot](Images/example.JPG)
 
+### DefaultTreeModel
+
+Or if you already have a Swing TreeModel made from DefaultMutableTreeNodes, the example from above would look like thie:
+
+```java
+import java.util.*;
+import javax.swing.tree.*;
+
+public class Example{
+    public static void main(String[] args){
+        DefaultMutableTreeNode tree=new DefaultMutableTreeNode("0");
+        DefaultMutableTreeNode c1=new DefaultMutableTreeNode("1");
+        DefaultMutableTreeNode c2=new DefaultMutableTreeNode("2");
+        DefaultMutableTreeNode c1_1=new DefaultMutableTreeNode("3");
+        DefaultMutableTreeNode c1_2=new DefaultMutableTreeNode("4");
+        tree.add(c1);
+        tree.add(c2);
+        c1.add(c1_1);
+        c1.add(c1_2);
+        c1_1.add(new DefaultMutableTreeNode("5"));
+        c1_1.add(new DefaultMutableTreeNode("6"));
+        c1_1.add(new DefaultMutableTreeNode("7"));
+        c1_2.add(new DefaultMutableTreeNode("8"));
+        c1_2.add(new DefaultMutableTreeNode("9"));
+        c2.add(new DefaultMutableTreeNode("10"));
+        
+        var pt = new PrettyPrintTree<DefaultMutableTreeNode>(
+                (x) -> new ArrayList(Collections.list(x.children())),
+                (x) -> x.getUserObject().toString()
+        );
+        pt.display(tree);
+        System.out.println();
+    }
+}
+```
 
 # Other Settings
 
