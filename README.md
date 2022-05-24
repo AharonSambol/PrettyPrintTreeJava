@@ -139,7 +139,7 @@ public class Example{
 
 ### DefaultTreeModel
 
-Or if you already have a Swing TreeModel made from DefaultMutableTreeNpdes, the example from above would look like thie:
+Or if you already have a Swing TreeModel made from DefaultMutableTreeNodes, the example from above would look like thie:
 
 ```java
 import java.util.*;
