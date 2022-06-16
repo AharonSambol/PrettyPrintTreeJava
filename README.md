@@ -68,6 +68,9 @@ you need to explain to the program how to print your tree. The way to accomplish
             add(x.getRChild());
         }}
     ```
+   **Note: ```List.of(x.getLChild(), x.getRChild())``` is not advised because ```List.of``` has a 
+@NotNull annotation which will throw an error if null is passed.**
+
 
 2) getValue: Given a node of your tree type returns that node's value
     for example if your tree implementation has:
