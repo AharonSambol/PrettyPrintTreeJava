@@ -83,10 +83,18 @@ public final class PrettyPrintTree<Node> {
         }
         return res;
     }
+    private LinkedList<Node> removeNull(List<Node> list){
+        var res = new LinkedList<Node>();
+        for (var node : list){
+            if(node == null){   continue; }
+            res.addLast(node);
+        }
+        return res;
+    }
     private String[][] treeToStr(Node node, int depth) {
         var val = getVal(node);
         var children = this.getChildren.apply(node);
-        children.removeAll(Collections.singleton(null));
+        children = removeNull(children);
         if (children.size() == 0) {
             String[][] res;
             if (val.length == 1) {
